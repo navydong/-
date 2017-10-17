@@ -6,27 +6,41 @@ import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import App from '../App';
 import Page from '../components/Page';
 import BasicForm from '../components/forms/BasicForm';
-import BasicTable from '../components/tables/BasicTables';
-import AdvancedTable from '../components/tables/AdvancedTables';
-import AsynchronousTable from '../components/tables/AsynchronousTable';
 import Login from '../components/pages/Login';
-import Echarts from '../components/charts/Echarts';
-import Recharts from '../components/charts/Recharts';
-import Icons from '../components/ui/Icons';
-import Buttons from '../components/ui/Buttons';
-import Spins from '../components/ui/Spins';
-import Modals from '../components/ui/Modals';
-import Notifications from '../components/ui/Notifications';
-import Tabs from '../components/ui/Tabs';
-import Banners from '../components/ui/banners';
-import Drags from '../components/ui/Draggable';
 import Dashboard from '../components/dashboard/Dashboard';
-import Gallery from '../components/ui/Gallery';
 import NotFound from '../components/pages/NotFound';
-import BasicAnimations from '../components/animation/BasicAnimations';
-import ExampleAnimations from '../components/animation/ExampleAnimations';
 import AuthBasic from '../components/auth/Basic';
 import RouterEnter from '../components/auth/RouterEnter';
+
+import BaseInfo from '../components/planManagement/BaseInfo'
+import FixingDateInfo from '../components/planManagement/FixingDateInfo'
+import FixingDate from '../components/planManagement/FixingDate'
+import Portfolio from '../components/planManagement/Portfolio'
+import GuidepostsInfo from '../components/planManagement/GuidepostsInfo'
+import Guideposts from '../components/planManagement/Guideposts'
+import RiskManagementInfo from '../components/planManagement/RiskManagementInfo'
+import RiskManagement from '../components/planManagement/RiskManagement'
+
+import ServiceInfo from '../components/organizationManagement/ServiceInfo'
+import Service from '../components/organizationManagement/Service'
+import BaseInfo1 from '../components/organizationManagement/BaseInfo-1'
+import Base from '../components/organizationManagement/Base'
+import ChangeConditionInfo from '../components/organizationManagement/ChangeConditionInfo'
+import ChangeCondition from '../components/organizationManagement/ChangeCondition'
+
+import CorporateBase from '../components/accountManagement/corporateAccount/CorporateBase'
+import CorporateBaseInfo from '../components/accountManagement/corporateAccount/CorporateBaseInfo'
+import PaymentMessage from '../components/accountManagement/corporateAccount/PaymentMessage'
+import PaymentMessageInfo from '../components/accountManagement/corporateAccount/PaymentMessageInfo'
+import PaymentRule from '../components/accountManagement/corporateAccount/PaymentRule'
+import PaymentRuleInfo from '../components/accountManagement/corporateAccount/PaymentRuleInfo'
+import Account from '../components/accountManagement/personalAccount/Account'
+import AccountInfo from '../components/accountManagement/personalAccount/AccountInfo'
+import PersonalBase from '../components/accountManagement/personalAccount/PersonalBase'
+import PersonalBaseInfo from '../components/accountManagement/personalAccount/PersonalBaseInfo'
+import PersonalInterests from '../components/accountManagement/personalAccount/PersonalInterests'
+import PersonalInterestsInfo from '../components/accountManagement/personalAccount/PersonalInterestsInfo'
+
 
 const Wysiwyg = (location, cb) => {     // 按需加载富文本配置
     require.ensure([], require => {
@@ -50,30 +64,44 @@ export default class CRouter extends Component {
                         <Route path={'form'}>
                             <Route path={'basicForm'} component={BasicForm} />
                         </Route>
-                        <Route path={'table'}>
-                            <Route path={'basicTable'} component={BasicTable} />
-                            <Route path={'advancedTable'} components={AdvancedTable} />
-                            <Route path={'asynchronousTable'} components={AsynchronousTable} />
+                        {/* 账户管理 */}
+                        <Route path="accountManagement">
+                            <Route path="corporateAccount">
+                                <Route path="corporateBase" component={CorporateBase} />
+                                <Route path="corporateBaseInfo" component={CorporateBaseInfo} />
+                                <Route path="paymentMessage" component={PaymentMessage} />
+                                <Route path="paymentMessageInfo" component={PaymentMessageInfo} />
+                                <Route path="paymentRule" component={PaymentRule} />
+                                <Route path="paymentRuleInfo" component={PaymentRuleInfo} />
+                            </Route>
+                            <Route path="personalAccount">
+                                <Route path="account" component={Account} />
+                                <Route path="accountInfo" component={AccountInfo} />
+                                <Route path="personalBase" component={PersonalBase} />
+                                <Route path="personalBaseInfo" component={PersonalBaseInfo} />
+                                <Route path="personalInterests" component={PersonalInterests} />
+                                <Route path="personalInterestsInfo" component={PersonalInterestsInfo} />
+                            </Route>
                         </Route>
-                        <Route path={'chart'}>
-                            <Route path={'echarts'} component={Echarts} />
-                            <Route path={'recharts'} component={Recharts} />
+                        {/* 机构管理 */}
+                        <Route path="organizationManagement">
+                            <Route path="serviceInfo" component={ServiceInfo} />
+                            <Route path="service" component={Service} />
+                            <Route path="baseInfo1" component={BaseInfo1} />
+                            <Route path="base" component={Base} />
+                            <Route path="changeConditionInfo" component={ChangeConditionInfo} />
+                            <Route path="changeCondition" component={ChangeCondition} />
                         </Route>
-                        <Route path={'ui'}>
-                            <Route path={'icons'} component={Icons} />
-                            <Route path={'buttons'} component={Buttons} />
-                            <Route path={'spins'} component={Spins} />
-                            <Route path={'modals'} component={Modals} />
-                            <Route path={'notifications'} component={Notifications} />
-                            <Route path={'tabs'} component={Tabs} />
-                            <Route path={'banners'} component={Banners} />
-                            <Route path={'wysiwyg'} getComponent={Wysiwyg} />
-                            <Route path={'drags'} component={Drags} />
-                            <Route path={'gallery'} component={Gallery} />
-                        </Route>
-                        <Route path={'animation'}>
-                            <Route path={'basicAnimations'} component={BasicAnimations} />
-                            <Route path={'exampleAnimations'} component={ExampleAnimations} />
+                        {/* 计划管理 */}
+                        <Route path="planManagement">
+                            <Route path="baseInfo" component={BaseInfo} />
+                            <Route path="portfolio" component={Portfolio} />
+                            <Route path="fixingDateInfo" component={FixingDateInfo} />
+                            <Route path="fixingDate" component={FixingDate} />
+                            <Route path="guidepostsInfo" component={GuidepostsInfo} />
+                            <Route path="guideposts" component={Guideposts} />
+                            <Route path="riskManagementInfo" component={RiskManagementInfo} />
+                            <Route path="riskManagement" component={RiskManagement} />
                         </Route>
                         <Route path={'dashboard/index'} component={Dashboard} />
                         <Route path="auth">

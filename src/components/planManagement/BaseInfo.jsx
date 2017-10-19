@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BreadcrumbCustom from '../BreadcrumbCustom';
 import { Card } from 'antd'
 import { Form, Row, Col, Input, Button, Icon, Table, Select, Affix, DatePicker } from 'antd';
+import { Link } from 'react-router'
 const FormItem = Form.Item;
 const Option = Select.Option
 
@@ -24,7 +25,9 @@ class BaseInfos extends Component {
                 <BreadcrumbCustom first="计划管理" second="计划基本信息" />
                 <Affix offsetTop={top - 40} style={{ textAlign: 'center' }}>
                     <div style={{ backgroundColor: '#eee', height: 40, lineHeight: '40px' }}>
+                    <Link to="app/planManagement/BaseInfoInfo" style={{marginRight: 10}}>
                         <Button type="primary">提交</Button>
+                    </Link>
                         <Button type="primary">重置</Button>
                     </div>
                 </Affix>

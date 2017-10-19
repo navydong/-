@@ -33,7 +33,7 @@ class ServiceInfo extends Component {
             <div>
                 <BreadcrumbCustom first="机构管理" second="服务机构信息" />
                 <div>
-                    <Card title="定价日信息">
+                    <Card title="服务机构信息">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/organizationManagement/service" style={{marginRight: 10}}>

@@ -28,7 +28,7 @@ class ChangeConditions extends Component {
         }
         return (
             <div>
-                <BreadcrumbCustom first="计划管理" second="管理机构变动情况" />
+                <BreadcrumbCustom first="机构管理" second="管理机构变动情况" />
                 <Affix offsetTop={top - 40} style={{ textAlign: 'center' }}>
                     <div style={{ backgroundColor: '#eee', height: 40, lineHeight: '40px' }}>
                         <Link to="/app/organizationManagement/ChangeConditionInfo" style={{ marginRight:10 }}>
@@ -39,7 +39,7 @@ class ChangeConditions extends Component {
                 </Affix>
                 <div>
                     <Form>
-                        <Card title="定价日信息">
+                        <Card title="管理机构变动情况">
                             <Row gutter={40}>
                                 {
                                     [

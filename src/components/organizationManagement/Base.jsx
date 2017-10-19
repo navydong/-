@@ -28,7 +28,7 @@ class Bases extends Component {
         }
         return (
             <div>
-                <BreadcrumbCustom first="计划管理" second="单位基本信息" />
+                <BreadcrumbCustom first="机构管理" second="单位基本信息" />
                 <Affix offsetTop={top - 40} style={{ textAlign: 'center' }}>
                     <div style={{ backgroundColor: '#eee', height: 40, lineHeight: '40px' }}>
                         <Link to="/app/organizationManagement/baseInfo1" style={{ marginRight:10 }}>

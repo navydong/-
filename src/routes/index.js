@@ -12,15 +12,19 @@ import NotFound from '../components/pages/NotFound';
 import AuthBasic from '../components/auth/Basic';
 import RouterEnter from '../components/auth/RouterEnter';
 
+// 计划管理
 import BaseInfo from '../components/planManagement/BaseInfo'
+import BaseInfoInfo from '../components/planManagement/BaseInfoInfo'
 import FixingDateInfo from '../components/planManagement/FixingDateInfo'
 import FixingDate from '../components/planManagement/FixingDate'
 import Portfolio from '../components/planManagement/Portfolio'
+import PortfolioInfo from '../components/planManagement/PortfolioInfo'
 import GuidepostsInfo from '../components/planManagement/GuidepostsInfo'
 import Guideposts from '../components/planManagement/Guideposts'
 import RiskManagementInfo from '../components/planManagement/RiskManagementInfo'
 import RiskManagement from '../components/planManagement/RiskManagement'
 
+// 机构管理
 import ServiceInfo from '../components/organizationManagement/ServiceInfo'
 import Service from '../components/organizationManagement/Service'
 import BaseInfo1 from '../components/organizationManagement/BaseInfo-1'
@@ -28,6 +32,7 @@ import Base from '../components/organizationManagement/Base'
 import ChangeConditionInfo from '../components/organizationManagement/ChangeConditionInfo'
 import ChangeCondition from '../components/organizationManagement/ChangeCondition'
 
+//账户管理
 import CorporateBase from '../components/accountManagement/corporateAccount/CorporateBase'
 import CorporateBaseInfo from '../components/accountManagement/corporateAccount/CorporateBaseInfo'
 import PaymentMessage from '../components/accountManagement/corporateAccount/PaymentMessage'
@@ -38,8 +43,20 @@ import Account from '../components/accountManagement/personalAccount/Account'
 import AccountInfo from '../components/accountManagement/personalAccount/AccountInfo'
 import PersonalBase from '../components/accountManagement/personalAccount/PersonalBase'
 import PersonalBaseInfo from '../components/accountManagement/personalAccount/PersonalBaseInfo'
-import PersonalInterests from '../components/accountManagement/personalAccount/PersonalInterests'
 import PersonalInterestsInfo from '../components/accountManagement/personalAccount/PersonalInterestsInfo'
+
+//报表管理
+import Funds from '../components/reportManagement/operational/Funds'
+import Confirm from '../components/reportManagement/operational/Confirm'
+import Directive from '../components/reportManagement/operational/Directive'
+import Fuzhai from '../components/reportManagement/publish/Fuzhai'
+import Biandong from '../components/reportManagement/publish/Biandong'
+
+//信息查询
+import CorporatePaySearch from '../components/informationSearch/corporate/CorporatePaySearch'
+import CorporatePaySearchInfo from '../components/informationSearch/corporate/CorporatePaySearchInfo'
+import PersonalSearch from '../components/informationSearch/personally/PersonalSearch'
+import PersonalSearchInfo from '../components/informationSearch/personally/PersonalSearchInfo'
 
 
 const Wysiwyg = (location, cb) => {     // 按需加载富文本配置
@@ -79,7 +96,6 @@ export default class CRouter extends Component {
                                 <Route path="accountInfo" component={AccountInfo} />
                                 <Route path="personalBase" component={PersonalBase} />
                                 <Route path="personalBaseInfo" component={PersonalBaseInfo} />
-                                <Route path="personalInterests" component={PersonalInterests} />
                                 <Route path="personalInterestsInfo" component={PersonalInterestsInfo} />
                             </Route>
                         </Route>
@@ -95,7 +111,9 @@ export default class CRouter extends Component {
                         {/* 计划管理 */}
                         <Route path="planManagement">
                             <Route path="baseInfo" component={BaseInfo} />
+                            <Route path="BaseInfoInfo" component={BaseInfoInfo} />
                             <Route path="portfolio" component={Portfolio} />
+                            <Route path="portfolioInfo" component={PortfolioInfo} />
                             <Route path="fixingDateInfo" component={FixingDateInfo} />
                             <Route path="fixingDate" component={FixingDate} />
                             <Route path="guidepostsInfo" component={GuidepostsInfo} />
@@ -103,6 +121,30 @@ export default class CRouter extends Component {
                             <Route path="riskManagementInfo" component={RiskManagementInfo} />
                             <Route path="riskManagement" component={RiskManagement} />
                         </Route>
+                        {/* 报表管理 */}
+                        <Route path="reportManagement">
+                            <Route path="operational">
+                                <Route path="funds" component={Funds} />
+                                <Route path="confirm" component={Confirm} />
+                                <Route path="directive" component={Directive} />
+                            </Route>
+                            <Route path="publish">
+                                <Route path="fuzhai" component={Fuzhai} />
+                                <Route path="biandong" component={Biandong} />
+                            </Route>
+                        </Route>
+                        {/* 信息查询 */}
+                        <Route path="informationSearch">
+                            <Route path="corporate">
+                                <Route path="corporatePaySearch" component={CorporatePaySearch} />
+                                <Route path="corporatePaySearchInfo" component={CorporatePaySearchInfo} />
+                            </Route>
+                            <Route path="personally">
+                                <Route path="personalSearch" component={PersonalSearch} />
+                                <Route path="personalSearchInfo" component={PersonalSearchInfo} />
+                            </Route>
+                        </Route>
+
                         <Route path={'dashboard/index'} component={Dashboard} />
                         <Route path="auth">
                             <Route path="basic" component={AuthBasic} />
@@ -110,7 +152,7 @@ export default class CRouter extends Component {
                         </Route>
                     </Route>
                     <Route path={'login'} components={Login} />
-                    <Route path={'404'} component={NotFound} />
+                    <Route path={'*'} component={NotFound} />
                 </Route>
             </Router>
         )

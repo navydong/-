@@ -34,9 +34,9 @@ class ChangeConditionInfo extends Component {
     render() {
         return (
             <div>
-                <BreadcrumbCustom first="计划管理" second="管理机构变动情况" />
+                <BreadcrumbCustom first="机构管理" second="管理机构变动情况" />
                 <div>
-                    <Card title="定价日信息">
+                    <Card title="管理机构变动情况">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/organizationManagement/ChangeCondition" style={{marginRight: 10}}>

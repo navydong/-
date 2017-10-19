@@ -120,7 +120,7 @@ class SiderCustom extends Component {
                         background: #fff;
                     }
                     ::-webkit-scrollbar-thumb{
-                        background-color: #fff;
+                        background-color: #c5d0d6;
                     }
                     .ant-layout .logo{
                         background: #29d;

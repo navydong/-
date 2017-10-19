@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import { Layout, version } from 'antd';
 import './style/index.less';
 import SiderCustom from './components/SiderCustom';
 import HeaderCustom from './components/HeaderCustom';
@@ -49,7 +49,7 @@ class App extends Component {
                   {this.props.children}
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
-                  React-Admin ©2017 Created by 865470087@qq.com
+                  React-Admin ©2017  React{version}
                 </Footer>
               </Layout>
                 {

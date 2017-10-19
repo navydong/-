@@ -45,9 +45,9 @@ class BaseInfo extends Component {
     render() {
         return (
             <div>
-                <BreadcrumbCustom first="计划管理" second="单位基本信息" />
+                <BreadcrumbCustom first="机构管理" second="单位基本信息" />
                 <div>
-                    <Card title="定价日信息">
+                    <Card title="单位基本信息">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/organizationManagement/base" style={{marginRight: 10}}>
@@ -60,7 +60,7 @@ class BaseInfo extends Component {
                                 <Button type="primary">导入</Button>
                             </Col>
                         </Row>
-                        <Table columns={tableColumns} dataSource={tableData} />              
+                        <Table columns={tableColumns} dataSource={tableData} scroll={{x:2200}}/>              
                     </Card>
                 </div>
             </div>

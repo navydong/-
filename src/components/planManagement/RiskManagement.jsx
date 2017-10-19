@@ -39,7 +39,7 @@ class RiskManagements extends Component {
                 </Affix>
                 <div>
                     <Form>
-                        <Card title="定价日信息">
+                        <Card title="年金计划投资规则信息">
                             <Row gutter={40}>
                                 {
                                     [

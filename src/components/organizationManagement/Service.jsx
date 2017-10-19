@@ -28,7 +28,7 @@ class Services extends Component {
         }
         return (
             <div>
-                <BreadcrumbCustom first="计划管理" second="服务机构信息" />
+                <BreadcrumbCustom first="机构管理" second="服务机构信息" />
                 <Affix offsetTop={top - 40} style={{ textAlign: 'center' }}>
                     <div style={{ backgroundColor: '#eee', height: 40, lineHeight: '40px' }}>
                         <Link to="/app/organizationManagement/ServiceInfo" style={{ marginRight:10 }}>
@@ -39,7 +39,7 @@ class Services extends Component {
                 </Affix>
                 <div>
                     <Form>
-                        <Card title="定价日信息">
+                        <Card title="服务机构信息">
                             <Row gutter={40}>
                                 {
                                     [

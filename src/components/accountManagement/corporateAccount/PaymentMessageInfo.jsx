@@ -30,9 +30,9 @@ class FixingDateInfo extends Component {
     render() {
         return (
             <div>
-                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 企业账户管理" second="企业缴费信息" />
+                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 单位账户管理" second="单位缴费信息" />
                 <div>
-                    <Card title="企业缴费信息">
+                    <Card title="单位缴费信息">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/accountManagement/corporateAccount/paymentMessage" style={{marginRight: 10}}>

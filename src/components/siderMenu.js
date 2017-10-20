@@ -17,17 +17,17 @@ export const siderMenu = {
         }]
       },
       {
-        "name": "企业账户管理",
+        "name": "单位账户管理",
         "submenu": [{
-            "name": "企业基本信息",
+            "name": "单位基本信息",
             "url": "/app/accountManagement/corporateAccount/corporateBaseInfo"
           },
           {
-            "name": "企业缴费规则",
+            "name": "单位缴费规则",
             "url": "/app/accountManagement/corporateAccount/paymentRuleInfo"
           },
           {
-            "name": "企业缴费信息",
+            "name": "单位缴费信息",
             "url": "/app/accountManagement/corporateAccount/paymentMessageInfo"
           }
         ]
@@ -69,43 +69,57 @@ export const siderMenu = {
       }, {
         "name": "投资组合风险控制指标",
         "url": "/app/planManagement/riskManagementInfo"
+      },{
+        "name": "账户管理费信息",
+        "url": "/app/planManagement/zhanghuguanlifeiInfo"
+      },{
+        "name": "账户计息信息",
+        "url": "/app/planManagement/interestMessageInfo"
+      },{
+        "name": "待遇支付信息",
+        "url": "/app/planManagement/daiyuzhifuInfo"
       }
     ]
-  }, {
+  }, 
+  /* {
     "name": "运作管理",
     "icon": "gift",
     "submenu": [{
         "name": "运作方案设置",
-        "url": "/app/planManagement/baseInfo1"
+        "url": "/app/operation/baseInfo1"
       },
       {
         "name": "估值信息管理",
-        "url": "/app/planManagement/portfolio1"
+        "url": "/app/operation/portfolio1"
       },
       {
         "name": "利息计算",
-        "url": "/app/planManagement/fixingDateInfo1"
+        "url": "/app/operation/fixingDateInfo1"
       }, {
         "name": "份额确认",
-        "url": "/app/planManagement/ruleInformation1"
+        "url": "/app/operation/ruleInformation1"
       }, {
         "name": "权益计算",
-        "url": "/app/planManagement/guideposts1"
+        "url": "/app/operation/guideposts1"
       }, {
         "name": "待遇支付",
-        "url": "/app/planManagement/guideposts1"
+        "url": "/app/operation/guideposts1"
       }, {
         "name": "缴费管理",
-        "url": "/app/planManagement/guideposts1"
+        "url": "/app/operation/guideposts1"
       }, {
         "name": "账户转移",
-        "url": "/app/planManagement/guideposts1"
+        "url": "/app/operation/guideposts1"
       }, {
         "name": "支付管理",
-        "url": "/app/planManagement/guideposts1"
+        "url": "/app/operation/guideposts1"
+      },{
+        "name": "账户计息信息",
+        "url": "/app/operation/interestMessageInfo"
       }
     ]
-  }, {
+  }, */
+   {
     "name": "工作流管理",
     "icon": "car",
     "submenu": [{
@@ -117,10 +131,7 @@ export const siderMenu = {
     "icon": "compass",
     "submenu": [{
       "name": "数据导入",
-      "url": "/app/planManagement/baseInfo1"
-    }, {
-      "name": "数据导出",
-      "url": "/app/planManagement/baseInfo1"
+      "url": "/app/interface/dataImport"
     }]
   }, {
     "name": "系统管理",
@@ -176,9 +187,9 @@ export const siderMenu = {
         "url": "/app/informationSearch/personally/personalSearch"
       }]
     }, {
-      "name": "企业信息",
+      "name": "单位信息",
       "submenu": [{
-        "name": "企业缴费信息查询",
+        "name": "单位缴费信息查询",
         "url": "/app/informationSearch/corporate/corporatePaySearch"
       }]
     }]

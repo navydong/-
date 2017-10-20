@@ -28,7 +28,7 @@ class Accounts extends Component {
         }
         return (
             <div>
-                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 企业账户管理" second="企业基本信息" />
+                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 单位账户管理" second="单位基本信息" />
                 <Affix offsetTop={top - 40} style={{ textAlign: 'center' }}>
                     <div style={{ backgroundColor: '#eee', height: 40, lineHeight: '40px' }}>
                         <Link to="/app/accountManagement/corporateAccount/corporateBaseInfo" style={{ marginRight:10 }}>
@@ -39,7 +39,7 @@ class Accounts extends Component {
                 </Affix>
                 <div>
                     <Form>
-                        <Card title="企业基本信息">
+                        <Card title="单位基本信息">
                             <Row gutter={40}>
                                 {
                                     [
@@ -48,10 +48,11 @@ class Accounts extends Component {
                                         { name: '组织机构代码', key: 'Planid', isInput: true, isRequired:true },
                                         { name: '统一社会信用代码', key: 'Accountplanid', isInput: true, isRequired:false },
                                         { name: '单位地址', key: 'Planname', isInput: true, isRequired:false },
+                                        { name: '是否为财政全额供款', key: 'Sfssd', isInput: false,  option: ['财政全额公款','非财政全额公款'],isRequired:false },
                                         { name: '单位类型', key: 'Planlicid', isInput: false, option: [1,2,3], isRequired:true},
                                         { name: '行业类别', key: 'Year', isInput: false, option: [1,2,3],isRequired:true },
                                         { name: '经费来源', key: 'Pricedate', isInput: false, option: [1,2,3], isRequired:true },
-                                        { name: '工商注册号', key: 'Lastupddate', isInput: true, isDate: true, isRequired:true },
+                                        { name: '工商注册号', key: 'Lastupddate', isInput: true, isRequired:true },
                                         { name: '单位注册地代码', key: 'Status', isInput: true, isRequired:false },
                                         { name: '法定代表人', key: 'Status', isInput: true, isRequired:false },
                                         { name: '单位电子邮件', key: 'Status', isInput: true, isRequired:false },

@@ -17,31 +17,33 @@ import { Link } from 'react-router'
  */
 class TemplInfo extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
 
     }
     render() {
         return (
             <div>
-                <BreadcrumbCustom first={this.props.title[0]} second={ this.props.title[1] } />
+                <BreadcrumbCustom first={this.props.title[0]} second={this.props.title[1]} />
                 <div>
-                    <Card title={ this.props.title[1] }>
-                        <Row gutter={40} style={{marginBottom:18}}>
-                            <Col sm={{span:10, push:18}}>
-                                <Link to={`/app/${this.props.indexUrl}`} style={{marginRight: 10}}>
+                    <Card title={this.props.title[1]}>
+                        <Row gutter={40} style={{ marginBottom: 18 }}>
+                            <Col sm={{ span: 10, push: 14 }} lg={{ span:8, push:18 }}>
+                                <Link to={`/app/${this.props.indexUrl}`} style={{ marginRight: 10 }}>
                                     <Button type="primary">增加</Button>
                                 </Link>
-                                <Link to="/app/planManagement/fixingDate" style={{marginRight: 10}}>
+                                <Link to="/app/planManagement/fixingDate" style={{ marginRight: 10 }}>
                                     <Button type="primary">修改</Button>
                                 </Link>
                                 <Button type="primary">删除</Button>
                                 <Button type="primary">导入</Button>
                             </Col>
                         </Row>
-                        <Table columns={this.props.tableColumns.map((item,index)=>{
-                                    return {title: item.name, dataIndex: index}}) || [{ name: '没有传入columns', key: 'Appseriono', isInput: true, isRequired:true },]} 
-                                dataSource={this.props.tableData || []} 
-                                scroll={{x: this.props.tableColumns.length*120}} />              
+                        <Table columns={this.props.tableColumns.map((item, index) => {
+                            return { title: item.name, dataIndex: index }
+                        }) || [{ name: '没有传入columns', key: 'Appseriono', isInput: true, isRequired: true },]}
+                            dataSource={this.props.tableData || []}
+                            scroll={this.props.scroll || { x: this.props.tableColumns.length * 120 }}
+                        />
                     </Card>
                 </div>
             </div>

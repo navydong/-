@@ -12,6 +12,7 @@ const tableColumns = [
     { name: '组织机构代码', key: 'Appseriono', isInput: true, isRequired:true },
     { name: '统一社会信用代码', key: 'Appseriono', isInput: true, isRequired:false },
     { name: '单位地址', key: 'Appseriono', isInput: true, isRequired:false },
+    { name: '是否为财政全额供款', key: 'Appseriono', isInput: false,  option: ['财政全额公款','非财政全额公款'],isRequired:false },
     { name: '单位类型', key: 'Appseriono', isInput: false, option: [1,2,3], isRequired:true},
     { name: '行业类别', key: 'Appseriono', isInput: false, option: [1,2,3],isRequired:true },
     { name: '经费来源', key: 'Appseriono', isInput: false, option: [1,2,3], isRequired:true },
@@ -48,9 +49,9 @@ class FixingDateInfo extends Component {
     render() {
         return (
             <div>
-                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 企业账户管理" second="企业基本信息" />
+                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 单位账户管理" second="单位基本信息" />
                 <div>
-                    <Card title="企业基本信息">
+                    <Card title="单位基本信息">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/accountManagement/corporateAccount/corporateBase" style={{marginRight: 10}}>

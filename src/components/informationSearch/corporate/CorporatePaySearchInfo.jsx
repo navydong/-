@@ -14,9 +14,7 @@ import Templ from '../../template/indexInfo.jsx'
 const tableColumns = [
     { name: '总缴费金额', key: 'Portfolioid', isInput: true, isRequired: true },
     { name: '总缴费人数', key: 'Portfolioid', isInput: false, option: [1, 2, 3, 4], isRequired: true },
-    { name: '上期缴费金额', key: 'Portfolioid', isInput: true, isRequired: true },
-    { name: '上期缴费人数', key: 'Portfolioid', isInput: true, isRequired: true },
-    { name: '上期缴费金额', key: 'Portfolioid', isInput: true, isRequired: true },
+    { name: '本期缴费金额', key: 'Portfolioid', isInput: true, isRequired: true },
     { name: '本期缴费人数', key: 'Portfolioid', isInput: true, isRequired: true },
     { name: '本期变动金额', key: 'Portfolioid', isInput: true, isRequired: true },
     { name: '本期变动人数', key: 'Portfolioid', isInput: true, isRequired: true },
@@ -25,9 +23,8 @@ const tableColumns = [
 const props = {
     indexUrl: 'informationSearch/corporate/corporatePaySearch',
     tableColumns,
-    title: ['信息查询 / 企业信息', '企业缴费信息查询'],
+    title: ['信息查询 / 单位信息', '单位缴费信息查询'],
     tableData: [],
-    scroll: { x: tableColumns.length*100 }
 }
 
 class Funds extends React.Component {

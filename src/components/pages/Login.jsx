@@ -36,6 +36,10 @@ class Login extends React.Component {
     gitHub = () => {
         window.location.href = 'https://github.com/login/oauth/authorize?client_id=792cdcd244e98dcd2dee&redirect_uri=http://localhost:3006/&scope=user&state=reactAdmin';
     };
+    personal = (e) => {
+        e.preventDefault();
+        window.location.href = '#/personLogin/dashboard/index'
+    }
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -48,6 +52,7 @@ class Login extends React.Component {
                         <FormItem>
                             {getFieldDecorator('userName', {
                                 rules: [{ required: true, message: '请输入用户名!' }],
+                                initialValue: 'guest'
                             })(
                                 <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="管理员输入admin, 游客输入guest" />
                             )}
@@ -55,6 +60,7 @@ class Login extends React.Component {
                         <FormItem>
                             {getFieldDecorator('password', {
                                 rules: [{ required: true, message: '请输入密码!' }],
+                                initialValue: 'guest'
                             })(
                                 <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="管理员输入admin, 游客输入guest" />
                             )}
@@ -67,12 +73,17 @@ class Login extends React.Component {
                                 <Checkbox>记住我</Checkbox>
                             )}
                             <a className="login-form-forgot" href="" style={{float: 'right'}}>忘记密码</a>
-                            <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
-                                登录
+                            <Button type="primary" className="login-form-button" style={{width: '100%'}} onClick={ this.personal }>
+                                个人登录
                             </Button>
+                            <div>
+                            <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
+                                企业登录
+                            </Button>
+                            </div>
                             或 <a href="">现在就去注册!</a>
                             <p>
-                                <Icon type="github" onClick={this.gitHub} />(第三方登录)
+                                <Icon type="" onClick={this.gitHub} />(第三方登录)
                             </p>
                         </FormItem>
                     </Form>

@@ -206,7 +206,7 @@ module.exports = {
           {
             loader: require.resolve('less-loader'),
                 options: {
-                  modifyVars: {  }, //modify variables
+                  modifyVars: { }, //modify variables
                 },
           },
         ],

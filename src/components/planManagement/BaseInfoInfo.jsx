@@ -1,5 +1,5 @@
 import React from 'react'
-import Templ from '../../components/template/indexInfo'
+import Templ from '../template/indexInfo'
 
 
 /**

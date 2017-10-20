@@ -19,7 +19,7 @@ const tableColumns = [
 const props = {
     indexUrl: 'informationSearch/corporate/corporatePaySearchInfo',
     tableColumns,
-    title: ['信息查询 / 企业信息', '企业缴费信息查询'],
+    title: ['信息查询 / 单位信息', '单位缴费信息查询'],
 }
 
 class Funds extends React.Component {

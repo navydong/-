@@ -7,11 +7,9 @@ import { Link } from 'react-router';
 
 
 const tableColumns = [
-    { name: '年金计划登记号', key: 'Appseriono', isInput: true, isRequired:true },
-    { name: '年金计划名称', key: 'Transtype', isInput: false, option: [1,2,3,4], isRequired:true },
+    { name: '姓名', key: 'Planname', isInput: true, isRequired:false },
     { name: '单位名称', key: 'Planid', isInput: true, isRequired:false },
     { name: '职工编号', key: 'Accountplanid', isInput: true, isRequired:false },
-    { name: '姓名', key: 'Planname', isInput: true, isRequired:false },
     { name: '性别', key: 'Planlicid', isInput: true , isRequired:true},
     { name: '出生日期', key: 'Year', isInput: true, isDate: true, isRequired:true },
     { name: '证件类型', key: 'Pricedate', isInput: true, isRequired:true },

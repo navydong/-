@@ -23,6 +23,12 @@ import GuidepostsInfo from '../components/planManagement/GuidepostsInfo'
 import Guideposts from '../components/planManagement/Guideposts'
 import RiskManagementInfo from '../components/planManagement/RiskManagementInfo'
 import RiskManagement from '../components/planManagement/RiskManagement'
+import InterestMessageInfo from '../components/planManagement/InterestMessageInfo'
+import InterestMessage from '../components/planManagement/InterestMessage'
+import Zhanghuguanlifei from '../components/planManagement/Zhanghuguanlifei'
+import ZhanghuguanlifeiInfo from '../components/planManagement/ZhanghuguanlifeiInfo'
+import DaiyuzhifuInfo from '../components/planManagement/DaiyuzhifuInfo'
+import Daiyuzhifu from '../components/planManagement/Daiyuzhifu'
 
 // 机构管理
 import ServiceInfo from '../components/organizationManagement/ServiceInfo'
@@ -44,6 +50,11 @@ import AccountInfo from '../components/accountManagement/personalAccount/Account
 import PersonalBase from '../components/accountManagement/personalAccount/PersonalBase'
 import PersonalBaseInfo from '../components/accountManagement/personalAccount/PersonalBaseInfo'
 import PersonalInterestsInfo from '../components/accountManagement/personalAccount/PersonalInterestsInfo'
+
+//运作管理
+
+//接口管理
+import DataImport from '../components/interface/DataImport'
 
 //报表管理
 import Funds from '../components/reportManagement/operational/Funds'
@@ -120,6 +131,19 @@ export default class CRouter extends Component {
                             <Route path="guideposts" component={Guideposts} />
                             <Route path="riskManagementInfo" component={RiskManagementInfo} />
                             <Route path="riskManagement" component={RiskManagement} />
+                            <Route path="Zhanghuguanlifei" component={Zhanghuguanlifei} />
+                            <Route path="ZhanghuguanlifeiInfo" component={ZhanghuguanlifeiInfo} />
+                            <Route path="interestMessageInfo" component={InterestMessageInfo} />
+                            <Route path="interestMessage" component={InterestMessage} />
+                            <Route path="daiyuzhifuInfo" component={DaiyuzhifuInfo} />
+                            <Route path="daiyuzhifu" component={Daiyuzhifu} />
+                        </Route>
+                        {/* 运作管理 */}
+
+
+                        {/* 接口管理 */}
+                        <Route path="interface">
+                            <Route path="dataImport" component={DataImport} />
                         </Route>
                         {/* 报表管理 */}
                         <Route path="reportManagement">

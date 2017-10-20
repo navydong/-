@@ -27,7 +27,7 @@ const tableColumns = [
 const props = {
     indexUrl: 'informationSearch/corporate/corporatePaySearch',
     tableColumns,
-    title: ['信息查询 / 企业信息', '企业缴费信息查询'],
+    title: ['信息查询 / 单位信息', '单位缴费信息查询'],
     tableData: [],
     scroll: { x: tableColumns.length*100 }
 }

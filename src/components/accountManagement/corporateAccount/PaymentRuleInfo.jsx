@@ -9,7 +9,7 @@ import { Link } from 'react-router';
 const tableColumns = [
     { name: '缴费计算方法', key: 'Appseriono', isInput: false, option: [1,2,3], isRequired:true },
     { name: '缴费周期', key: 'Transtype', isInput: false, option: [1,2,3,4], isRequired:true },
-    { name: '缴费比例（企业）', key: 'Planid', isInput: true, isRequired:false },
+    { name: '缴费比例（单位）', key: 'Planid', isInput: true, isRequired:false },
     { name: '缴费比例（个人）', key: 'Accountplanid', isInput: true, isRequired:false },
 ].map((item)=>{
     return {title: item.name, dataIndex: item.key}
@@ -25,9 +25,9 @@ class FixingDateInfo extends Component {
     render() {
         return (
             <div>
-                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 企业账户管理" second="企业缴费规则" />
+                <BreadcrumbCustom first="账户管理 &nbsp; / &nbsp; 单位账户管理" second="单位缴费规则" />
                 <div>
-                    <Card title="企业缴费规则">
+                    <Card title="单位缴费规则">
                         <Row gutter={40} style={{marginBottom:18}}>
                             <Col sm={{span:10, push:18}}>
                                 <Link to="/app/accountManagement/corporateAccount/paymentRule" style={{marginRight: 10}}>

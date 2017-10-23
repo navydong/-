@@ -23,6 +23,7 @@ const props = {
 
 class Funds extends React.Component {
     render() {
+        console.log(1111)
         return (
             <Templ {...props} />
         )

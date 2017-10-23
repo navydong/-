@@ -68,8 +68,11 @@ import CorporatePaySearch from '../components/informationSearch/corporate/Corpor
 import CorporatePaySearchInfo from '../components/informationSearch/corporate/CorporatePaySearchInfo'
 import PersonalSearch from '../components/informationSearch/personally/PersonalSearch'
 import PersonalSearchInfo from '../components/informationSearch/personally/PersonalSearchInfo'
-
-
+import Jiben from '../components/informationSearch/personally/jiben'
+import quanyi from '../components/informationSearch/personally/quanyi'
+import jiaofei from '../components/informationSearch/personally/jiaofei'
+import daiyuzhifu from '../components/informationSearch/personally/daiyuzhifu'
+import danweijiaofei from '../components/informationSearch/corporate/danweijiaofei'
 const Wysiwyg = (location, cb) => {     // 按需加载富文本配置
     require.ensure([], require => {
         cb(null, require('../components/ui/Wysiwyg').default);
@@ -87,7 +90,7 @@ export default class CRouter extends Component {
         return (
             <Router history={hashHistory}>
                 <Route path={'/'} components={Page}>
-                    <IndexRedirect to="/app/dashboard/index" />
+                    <IndexRedirect to="/app/informationSearch/personally/jiben" />
                     <Route path={'app'} component={App}>
                         <Route path={'form'}>
                             <Route path={'basicForm'} component={BasicForm} />
@@ -162,10 +165,15 @@ export default class CRouter extends Component {
                             <Route path="corporate">
                                 <Route path="corporatePaySearch" component={CorporatePaySearch} />
                                 <Route path="corporatePaySearchInfo" component={CorporatePaySearchInfo} />
+                                <Route path="danweijiaofei" component={danweijiaofei} />
                             </Route>
                             <Route path="personally">
                                 <Route path="personalSearch" component={PersonalSearch} />
                                 <Route path="personalSearchInfo" component={PersonalSearchInfo} />
+                                <Route path="jiben" component={Jiben} />
+                                <Route path="quanyi" component={quanyi} />
+                                <Route path="jiaofei" component={jiaofei} />
+                                <Route path="daiyuzhifu" component={daiyuzhifu} />
                             </Route>
                         </Route>
 

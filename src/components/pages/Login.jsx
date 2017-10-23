@@ -46,23 +46,21 @@ class Login extends React.Component {
             <div className="login">
                 <div className="login-form" >
                     <div className="login-logo">
-                        <span>React Admin</span>
+                        <span>职业年金</span>
                     </div>
                     <Form onSubmit={this.handleSubmit} style={{maxWidth: '300px'}}>
                         <FormItem>
                             {getFieldDecorator('userName', {
                                 rules: [{ required: true, message: '请输入用户名!' }],
-                                initialValue: 'guest'
                             })(
-                                <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="管理员输入admin, 游客输入guest" />
+                                <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="请输入用户名" />
                             )}
                         </FormItem>
                         <FormItem>
                             {getFieldDecorator('password', {
                                 rules: [{ required: true, message: '请输入密码!' }],
-                                initialValue: 'guest'
                             })(
-                                <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="管理员输入admin, 游客输入guest" />
+                                <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="请输入密码" />
                             )}
                         </FormItem>
                         <FormItem>
@@ -73,18 +71,11 @@ class Login extends React.Component {
                                 <Checkbox>记住我</Checkbox>
                             )}
                             <a className="login-form-forgot" href="" style={{float: 'right'}}>忘记密码</a>
-                            <Button type="primary" className="login-form-button" style={{width: '100%'}} onClick={ this.personal }>
-                                个人登录
-                            </Button>
                             <div>
                             <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
-                                企业登录
+                                个人登录
                             </Button>
                             </div>
-                            或 <a href="">现在就去注册!</a>
-                            <p>
-                                <Icon type="" onClick={this.gitHub} />(第三方登录)
-                            </p>
                         </FormItem>
                     </Form>
                 </div>
